@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from "next/server"
 import { config } from "@/lib/config"
 
+// 注意：在静态导出模式下，此 API 路由在构建时会被排除
+// 生产环境的 API 请求通过 Nginx 代理处理
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ path: string[] }> }

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useState, useEffect, useMemo, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { DayView } from "@/components/day-view"
 import { WeekView } from "@/components/week-view"
@@ -22,7 +22,8 @@ import type { Task } from "@/types/task"
 
 type ViewType = "day" | "week" | "month"
 
-export default function CalendarPage() {
+// 提取使用 useSearchParams 的组件
+function CalendarPageContent() {
   const { logout } = useAuth()
   const searchParams = useSearchParams()
   const [view, setView] = useState<ViewType>("day")
@@ -223,5 +224,18 @@ export default function CalendarPage() {
 
       <AIChat open={aiChatOpen} onOpenChange={setAIChatOpen} />
     </div>
+  )
+}
+
+// 主组件，用 Suspense 包裹使用 useSearchParams 的组件
+export default function CalendarPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-muted-foreground">加载中...</div>
+      </div>
+    }>
+      <CalendarPageContent />
+    </Suspense>
   )
 }

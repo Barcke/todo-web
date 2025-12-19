@@ -89,11 +89,33 @@ pnpm install
 
 ### 环境变量配置
 
-创建 `.env.local` 文件（如果不存在），配置后端 API 地址：
+#### 本地开发环境
+
+创建 `.env.local` 文件（参考 `env.local.example`），配置后端 API 地址：
 
 ```env
+# 前端部署的子路径（本地开发通常使用根路径，可以不设置）
+NEXT_PUBLIC_BASE_PATH=
+
+# 后端 API 地址
 BACKEND_API_BASE_URL=http://localhost:6158/api
 ```
+
+#### 生产环境
+
+创建 `.env.production` 文件（参考 `env.production.example`），配置生产环境变量：
+
+```env
+# 前端部署的子路径（根路径部署则留空）
+NEXT_PUBLIC_BASE_PATH=/todo-server
+
+# 后端 API 完整地址
+BACKEND_API_BASE_URL=https://todo-server.barcke.com/api
+```
+
+**环境变量说明：**
+- `NEXT_PUBLIC_BASE_PATH`：前端部署的子路径，必须以 `/` 开头，不能以 `/` 结尾。根路径部署时设置为空字符串或不设置。
+- `BACKEND_API_BASE_URL`：后端 API 完整地址，必须包含协议（http/https）和完整路径。
 
 ### 开发模式
 
@@ -106,14 +128,31 @@ pnpm dev
 ### 构建生产版本
 
 ```bash
+# 设置环境变量后构建
+NEXT_PUBLIC_BASE_PATH=/todo-server \
+BACKEND_API_BASE_URL=https://todo-server.barcke.com/api \
 pnpm build
 ```
 
-### 启动生产服务器
+构建完成后，静态文件会输出到 `out` 目录。
+
+### 生产部署
+
+项目使用静态导出模式，需要通过 Nginx 等 Web 服务器部署。详细部署说明请参考 [DEPLOYMENT.md](./DEPLOYMENT.md)。
+
+**快速部署步骤：**
+1. 配置环境变量并构建项目
+2. 配置 Nginx（参考 `nginx.example.conf`）
+3. 将 `out` 目录部署到服务器
+4. 重启 Nginx 服务
+
+### 启动生产服务器（仅用于测试）
 
 ```bash
 pnpm start
 ```
+
+注意：静态导出模式下，`pnpm start` 仅用于本地测试，生产环境应使用 Nginx 部署。
 
 ### 代码检查
 

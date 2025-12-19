@@ -83,16 +83,30 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 // 项目配置文件
+// NEXT_PUBLIC_BASE_PATH 会在构建时注入到代码中（客户端和服务端）
 __turbopack_context__.s([
     "config",
     ()=>config
 ]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/Desktop/web/calendar-design-and-interaction/node_modules/.pnpm/next@16.0.10_react-dom@19.2.0_react@19.2.0__react@19.2.0/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+const BASE_PATH = __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.NEXT_PUBLIC_BASE_PATH || "";
+// 构建浏览器端 API 路径，包含 basePath
+const buildApiBaseUrl = ()=>{
+    const apiPath = "/api/proxy";
+    if (BASE_PATH) {
+        // 如果 basePath 存在，拼接路径（basePath 已包含前导 /）
+        return `${BASE_PATH}${apiPath}`;
+    }
+    return apiPath;
+};
 const config = {
-    // 后端 API 基础 URL（用于 Next.js API 代理）
-    backendApiBaseUrl: "http://localhost:6158/api",
-    // 前端 API 基础 URL（通过 Next.js API 路由代理）
-    // 在浏览器中使用相对路径，避免 CORS 问题
-    apiBaseUrl: ("TURBOPACK compile-time truthy", 1) ? "/api/proxy" : "TURBOPACK unreachable"
+    // 后端 API 基础 URL（用于服务端直接调用或 Next.js API 代理）
+    // 从环境变量读取，开发环境有默认值，生产环境必须配置
+    backendApiBaseUrl: __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"].env.BACKEND_API_BASE_URL || "http://localhost:6158/api",
+    // 前端 API 基础 URL（通过 Next.js API 路由代理或 Nginx 代理）
+    // 在浏览器中使用，自动包含 basePath（如果配置了子路径部署）
+    // 在服务端直接使用后端 URL（静态导出模式下服务端代码不会运行）
+    apiBaseUrl: ("TURBOPACK compile-time truthy", 1) ? buildApiBaseUrl() : "TURBOPACK unreachable"
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
