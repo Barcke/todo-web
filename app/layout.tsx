@@ -11,25 +11,13 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "日历待办 - 极简任务管理",
-  description: "参考苹果日历极简风格的任务管理应用",
+  title: "DoReMe",
+  description: "DoReMe - 极简任务管理应用",
   generator: "v0.app",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/doreme_logo.png",
+    shortcut: "/doreme_logo.png",
+    apple: "/doreme_logo.png",
   },
 }
 

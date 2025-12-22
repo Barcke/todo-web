@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useMemo, Suspense } from "react"
-import { useSearchParams } from "next/navigation"
+import { useSearchParams, useRouter, usePathname } from "next/navigation"
 import { DayView } from "@/components/day-view"
 import { WeekView } from "@/components/week-view"
 import { MonthView } from "@/components/month-view"
@@ -24,7 +24,9 @@ type ViewType = "day" | "week" | "month"
 
 // 提取使用 useSearchParams 的组件
 function CalendarPageContent() {
-  const { logout } = useAuth()
+  const { logout, isAuthenticated } = useAuth()
+  const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
   const [view, setView] = useState<ViewType>("day")
   
@@ -173,7 +175,13 @@ function CalendarPageContent() {
       </main>
 
       <FloatingActionButtons
-        onAddTask={() => setAddSheetOpen(true)}
+        onAddTask={() => {
+          if (!isAuthenticated) {
+            router.push(`/login?redirect=${encodeURIComponent(pathname)}`)
+            return
+          }
+          setAddSheetOpen(true)
+        }}
         onShowStatistics={() => setStatisticsOpen(true)}
         onShowAIChat={() => setAIChatOpen(true)}
       />

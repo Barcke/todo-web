@@ -198,25 +198,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2
 ;
 ;
 const metadata = {
-    title: "日历待办 - 极简任务管理",
-    description: "参考苹果日历极简风格的任务管理应用",
+    title: "DoReMe",
+    description: "DoReMe - 极简任务管理应用",
     generator: "v0.app",
     icons: {
-        icon: [
-            {
-                url: "/icon-light-32x32.png",
-                media: "(prefers-color-scheme: light)"
-            },
-            {
-                url: "/icon-dark-32x32.png",
-                media: "(prefers-color-scheme: dark)"
-            },
-            {
-                url: "/icon.svg",
-                type: "image/svg+xml"
-            }
-        ],
-        apple: "/apple-icon.png"
+        icon: "/doreme_logo.png",
+        shortcut: "/doreme_logo.png",
+        apple: "/doreme_logo.png"
     }
 };
 const viewport = {
@@ -245,33 +233,33 @@ function RootLayout({ children }) {
                     children,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$components$2f$toast$2d$notifications$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ToastNotifications"], {}, void 0, false, {
                         fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-                        lineNumber: 57,
+                        lineNumber: 45,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$components$2f$ui$2f$sonner$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Toaster"], {}, void 0, false, {
                         fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-                        lineNumber: 58,
+                        lineNumber: 46,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Desktop$2f$web$2f$calendar$2d$design$2d$and$2d$interaction$2f$node_modules$2f2e$pnpm$2f40$vercel$2b$analytics$40$1$2e$3$2e$1_next$40$16$2e$0$2e$10_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f40$vercel$2f$analytics$2f$dist$2f$next$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Analytics"], {}, void 0, false, {
                         fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-                        lineNumber: 59,
+                        lineNumber: 47,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-                lineNumber: 55,
+                lineNumber: 43,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-            lineNumber: 54,
+            lineNumber: 42,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Desktop/web/calendar-design-and-interaction/app/layout.tsx",
-        lineNumber: 53,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }
