@@ -76,9 +76,18 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-md space-y-8">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-foreground">注册</h1>
-          <p className="mt-2 text-sm text-muted-foreground">创建新账户</p>
+        <div className="text-center space-y-6">
+          <div className="flex justify-center">
+            <img 
+              src="/doreme_logo.png" 
+              alt="DoReMe Logo" 
+              className="h-24 w-auto object-contain drop-shadow-sm"
+            />
+          </div>
+          <div>
+            <h1 className="text-2xl font-bold text-foreground">注册</h1>
+            <p className="mt-2 text-sm text-muted-foreground">创建新账户</p>
+          </div>
         </div>
 
         <Form {...form}>
