@@ -15,6 +15,8 @@ const nextConfig = {
   assetPrefix: basePath,
   // 静态导出配置
   output: "export",
+  // 配置路由：不使用尾部斜杠，生成的文件为 login.html 而不是 login/index.html
+  trailingSlash: false,
 }
 
 export default nextConfig

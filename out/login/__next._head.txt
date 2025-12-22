@@ -1,8 +1,0 @@
-1:"$Sreact.fragment"
-2:I[43924,["/_next/static/chunks/a6c69531e9ca4436.js","/_next/static/chunks/daa9e8c16a4a0b31.js"],"ViewportBoundary"]
-4:I[43924,["/_next/static/chunks/a6c69531e9ca4436.js","/_next/static/chunks/daa9e8c16a4a0b31.js"],"MetadataBoundary"]
-5:"$Sreact.suspense"
-7:I[42018,["/_next/static/chunks/a6c69531e9ca4436.js","/_next/static/chunks/daa9e8c16a4a0b31.js"],"IconMark"]
-0:{"buildId":"H69Go6FzGAblOm_FDHsVh","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
-3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#ffffff"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#0a0a0a"}]]
-6:[["$","title","0",{"children":"日历待办 - 极简任务管理"}],["$","meta","1",{"name":"description","content":"参考苹果日历极简风格的任务管理应用"}],["$","meta","2",{"name":"generator","content":"v0.app"}],["$","link","3",{"rel":"icon","href":"/icon-light-32x32.png","media":"(prefers-color-scheme: light)"}],["$","link","4",{"rel":"icon","href":"/icon-dark-32x32.png","media":"(prefers-color-scheme: dark)"}],["$","link","5",{"rel":"icon","href":"/icon.svg","type":"image/svg+xml"}],["$","link","6",{"rel":"apple-touch-icon","href":"/apple-icon.png"}],["$","$L7","7",{}]]
